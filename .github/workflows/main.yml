@@ -21,7 +21,7 @@ jobs:
         run: npm install
       - name: Start the project
         run: npm run serve &
-      - name: Wait for Vue server to start
+      - name: Wait for Vue server to sleep
         run: sleep 12s
       - name: Stop server
         run: kill $(lsof -t -i :8080) || true
